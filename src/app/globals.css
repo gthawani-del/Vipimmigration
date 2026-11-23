@@ -88,3 +88,17 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .bottom-nav{height:calc(58px + env(safe-area-inset-bottom));padding-top:4px;padding-bottom:calc(4px + env(safe-area-inset-bottom))}
   input,select,textarea,.search input,.chat-form input{font-size:16px}
 }
+
+/* Reference typography: navy text, restrained article weight, red update flags. */
+.module-updates .draft-tag{background:#c40018;color:#fff;font-weight:700;letter-spacing:0;border-radius:3px;line-height:1;padding:4px 5px}
+@media(max-width:600px){
+  .hero-home h1{color:#071b52;font-size:22px;font-weight:700;line-height:1.28;max-width:225px;letter-spacing:-.55px}
+  .hero-home p{color:#29364e;font-size:11px;font-weight:400;line-height:1.5}
+  .hero-home .actions .button{font-weight:500}
+  .hero-home .trust{color:#102550;font-size:9px;font-weight:400}
+  .goals-intro .section-heading h2,.module-updates .section-heading h2{color:#081d52;font-size:14px;font-weight:700;line-height:1.35;letter-spacing:-.15px}
+  .goal-grid:not(.expanded) h3{color:#0a2056;font-size:10.5px;font-weight:400;line-height:1.4}
+  .module-updates .article-row h3{color:#081d52;font-size:11px;font-weight:500;line-height:1.5}
+  .module-updates .draft-tag{font-size:8px;padding:4px 5px;margin-top:1px}
+  .section-heading>a{font-size:10px;font-weight:400;color:#164294}
+}
