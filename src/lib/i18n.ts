@@ -1,0 +1,7 @@
+import type {Locale} from './types';
+export const languages:Record<Locale,string>={en:'English',hi:'हिन्दी',pa:'ਪੰਜਾਬੀ',gu:'ગુજરાતી'};
+export const labels:Record<Locale,Record<string,string>>={
+en:{home:'Home',explore:'Explore Canada',updates:'Updates',guides:'Guides',india:'India to Canada',videos:'Videos',ask:'Ask VIP AI',saved:'Saved',account:'Account',more:'More',login:'Sign in',search:'Search guides and updates',fallback:'This content is available in English while the translation is being reviewed.'},
+hi:{home:'होम',explore:'कनाडा जानें',updates:'अपडेट',guides:'मार्गदर्शिकाएँ',india:'भारत से कनाडा',videos:'वीडियो',ask:'VIP AI से पूछें',saved:'सहेजे गए',account:'खाता',more:'और',login:'साइन इन',search:'मार्गदर्शिकाएँ और अपडेट खोजें',fallback:'अनुवाद की समीक्षा होने तक यह सामग्री अंग्रेज़ी में उपलब्ध है।'},
+pa:{home:'ਮੁੱਖ ਪੰਨਾ',explore:'ਕੈਨੇਡਾ ਜਾਣੋ',updates:'ਅੱਪਡੇਟ',guides:'ਮਾਰਗਦਰਸ਼ਕ',india:'ਭਾਰਤ ਤੋਂ ਕੈਨੇਡਾ',videos:'ਵੀਡੀਓ',ask:'VIP AI ਨੂੰ ਪੁੱਛੋ',saved:'ਸੰਭਾਲੇ ਹੋਏ',account:'ਖਾਤਾ',more:'ਹੋਰ',login:'ਸਾਈਨ ਇਨ',search:'ਮਾਰਗਦਰਸ਼ਕ ਅਤੇ ਅੱਪਡੇਟ ਲੱਭੋ',fallback:'ਅਨੁਵਾਦ ਦੀ ਸਮੀਖਿਆ ਹੋਣ ਤੱਕ ਇਹ ਸਮੱਗਰੀ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਉਪਲਬਧ ਹੈ।'},
+gu:{home:'હોમ',explore:'કેનેડા વિશે જાણો',updates:'અપડેટ્સ',guides:'માર્ગદર્શિકાઓ',india:'ભારતથી કેનેડા',videos:'વિડિયો',ask:'VIP AI ને પૂછો',saved:'સાચવેલ',account:'ખાતું',more:'વધુ',login:'સાઇન ઇન',search:'માર્ગદર્શિકાઓ અને અપડેટ્સ શોધો',fallback:'અનુવાદની સમીક્ષા થાય ત્યાં સુધી આ સામગ્રી અંગ્રેજીમાં ઉપલબ્ધ છે.'}};

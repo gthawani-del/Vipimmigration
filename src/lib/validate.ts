@@ -1,0 +1,9 @@
+import type {ContentState} from './types';
+type Obj=Record<string,unknown>;
+const obj=(v:unknown):v is Obj=>!!v&&typeof v==='object'&&!Array.isArray(v);
+const strings=(v:Obj,keys:string[])=>keys.every(k=>typeof v[k]==='string');
+const array=(v:unknown,check:(x:unknown)=>boolean):boolean=>Array.isArray(v)&&v.every(check);
+const section=(v:unknown)=>obj(v)&&strings(v,['id','type','title','body'])&&typeof v.visible==='boolean';
+const translation=(v:unknown)=>obj(v)&&strings(v,['title','description'])&&typeof v.approved==='boolean'&&(v.sections===undefined||array(v.sections,x=>obj(x)&&strings(x,['id','title','body'])));
+const page=(v:unknown)=>obj(v)&&strings(v,['id','slug','title','description','status','kind','category','imageId','updatedAt'])&&['draft','published'].includes(String(v.status))&&['page','guide','update'].includes(String(v.kind))&&typeof v.reviewed==='boolean'&&obj(v.seo)&&strings(v.seo,['title','description','keywords','canonical','ogImageId'])&&typeof v.seo.noindex==='boolean'&&array(v.sections,section)&&array(v.sources,s=>obj(s)&&strings(s,['label','url']))&&obj(v.translations)&&Object.values(v.translations).every(translation);
+export function isContentState(v:unknown):v is ContentState{return obj(v)&&array(v.pages,page)&&array(v.media,m=>obj(m)&&strings(m,['id','name','src','alt','driveUrl','provenance'])&&['width','height','focalX','focalY'].every(k=>typeof m[k]==='number'&&Number.isFinite(m[k])))&&array(v.videos,x=>obj(x)&&strings(x,['id','title','description','category','imageId','sourceType','url','status','articleId']))&&array(v.jobs,x=>obj(x)&&strings(x,['id','articleId','method','format','locale','status','script']))&&obj(v.settings)&&typeof v.settings.siteDomain==='string'&&Number.isInteger(v.settings.guestDailyLimit)&&Number(v.settings.guestDailyLimit)>=0&&(v.settings.memberDailyLimit===null||(Number.isInteger(v.settings.memberDailyLimit)&&Number(v.settings.memberDailyLimit)>0))}

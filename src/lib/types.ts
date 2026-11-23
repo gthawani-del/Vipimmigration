@@ -1,0 +1,9 @@
+export type Locale = 'en' | 'hi' | 'pa' | 'gu';
+export type Section = {id:string;type:'hero'|'goals'|'updates'|'guides'|'videos'|'assistant'|'text'|'faq';title:string;body:string;visible:boolean};
+export type PageRecord = {id:string;slug:string;title:string;description:string;status:'draft'|'published';kind:'page'|'guide'|'update';category:string;imageId:string;seo:{title:string;description:string;keywords:string;canonical:string;noindex:boolean;ogImageId:string};sections:Section[];sources:{label:string;url:string}[];translations:Partial<Record<Locale,{title:string;description:string;approved:boolean;sections?:{id:string;title:string;body:string}[]}>>;updatedAt:string;reviewed:boolean};
+export type MediaRecord={id:string;name:string;src:string;alt:string;width:number;height:number;driveUrl:string;provenance:string;focalX:number;focalY:number};
+export type VideoRecord={id:string;title:string;description:string;category:string;imageId:string;sourceType:'youtube'|'upload';url:string;status:'draft'|'published';articleId:string};
+export type VideoJob={id:string;articleId:string;method:'ai'|'deterministic';format:'narrated'|'presenter';locale:Locale;status:'draft';script:string};
+export type Settings={guestDailyLimit:number;memberDailyLimit:number|null;siteDomain:string};
+export type ContentState={pages:PageRecord[];media:MediaRecord[];videos:VideoRecord[];jobs:VideoJob[];settings:Settings};
+export type ChatMessage={role:'user'|'assistant';text:string};
