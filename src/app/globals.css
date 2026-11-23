@@ -53,3 +53,6 @@
   .empty{padding:25px 12px}.empty-actions{gap:14px}.empty-actions .button{font-size:12px}
 }
 @media(max-width:360px){.hero-home h1{font-size:22px;max-width:225px}.hero-home .actions .button{font-size:11px}.hero-home .trust span{padding-inline:6px}.goal-grid:not(.expanded){gap:7px}}
+/* Let scrollable category tabs shrink inside the mobile grid track. */
+.two-column>section{min-width:0}
+@media(max-width:600px){.two-column,.article-layout{grid-template-columns:minmax(0,1fr)}.goal-grid:not(.expanded) h3{font-size:11px;max-width:68px}}
