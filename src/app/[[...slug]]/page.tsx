@@ -1,0 +1,3 @@
+import {Portal} from '@/components/portal';import {seed} from '@/lib/seed';import type {Metadata} from 'next';
+export async function generateMetadata({params}:{params:Promise<{slug?:string[]}>}):Promise<Metadata>{const {slug}=await params;const p=seed.pages.find(p=>p.slug===(slug||[]).join('/'));return {title:{absolute:p?.seo.title||'VIP Immigration Services'},description:p?.seo.description,keywords:p?.seo.keywords,robots:{index:false,follow:false}}}
+export default async function Page({params}:{params:Promise<{slug?:string[]}>}){const {slug}=await params;return <Portal slug={(slug||[]).join('/')}/>}
