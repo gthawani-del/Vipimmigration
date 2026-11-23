@@ -9,7 +9,7 @@ export const seed:ContentState={
       "status": "draft",
       "kind": "page",
       "category": "General",
-      "imageId": "canada-mountains",
+      "imageId": "canada-home-art",
       "seo": {
         "title": "Understand Canada Immigration Before You Act. | VIP Immigration Services",
         "description": "Trusted, source-cited information for Indian aspirants — all in one place.",
@@ -945,6 +945,18 @@ export const seed:ContentState={
       "height": 81,
       "driveUrl": "https://drive.google.com/file/d/1RjxPoe6XfTODVcfPq-K25v6cAlTogNG4/view?usp=drivesdk",
       "provenance": "Extracted from supplied desktop UI PDF. Shared across desktop and mobile.",
+      "focalX": 50,
+      "focalY": 50
+    },
+    {
+      "id": "canada-home-art",
+      "name": "Canada homepage artwork",
+      "src": "/media/canada-home-art.webp",
+      "alt": "Toronto skyline, Canadian mountains and maple leaf",
+      "width": 258,
+      "height": 310,
+      "driveUrl": "https://drive.google.com/file/d/11o0If3x63fe-q2xF65W9er2T_X5FFgYP/view?usp=drivesdk",
+      "provenance": "Sliced from supplied mobile UI PDF, page 2, rectangle 510,260,768,570. Shared homepage artwork across desktop and mobile.",
       "focalX": 50,
       "focalY": 50
     }

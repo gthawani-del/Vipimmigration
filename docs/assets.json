@@ -102,5 +102,18 @@
     "focalX": 50,
     "focalY": 50,
     "sha256": "7670bcc14ec5b5c206474024bba4854622e7115694d479a335d1e917592fdbab"
+  },
+  {
+    "id": "canada-home-art",
+    "name": "Canada homepage artwork",
+    "src": "/media/canada-home-art.webp",
+    "alt": "Toronto skyline, Canadian mountains and maple leaf",
+    "width": 258,
+    "height": 310,
+    "driveUrl": "https://drive.google.com/file/d/11o0If3x63fe-q2xF65W9er2T_X5FFgYP/view?usp=drivesdk",
+    "provenance": "Sliced from supplied mobile UI PDF, page 2, rectangle 510,260,768,570. Shared homepage artwork across desktop and mobile.",
+    "focalX": 50,
+    "focalY": 50,
+    "sha256": "c3ac76bfada99f74c9e6d1af84f28a2124df6d42218c16f9c8a1f0ec779a160a"
   }
 ]
